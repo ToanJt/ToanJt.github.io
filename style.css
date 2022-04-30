@@ -1,0 +1,501 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* COMMON */
+.clear {
+    clear: both;
+}
+.color-white {
+    color: white;
+}
+.col-second {
+    width: 50%;
+    float: left;
+}
+.row {
+    margin: 10px 0;
+}
+.block-dpl {
+    display: block;
+}
+.pd-bt16 {
+    padding-bottom: 16px;
+}
+.mg-top24 {
+    margin-top: 22px;
+}
+.mg-top16 {
+    margin-top: 16px;
+}
+.display-none {
+    display:  none;
+}
+
+/*HEADER*/
+#header {
+    background-color: black;
+    height: 46px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#nav li {
+    display: inline-block;
+    line-height: 46px;
+    float: left;
+    position: relative;
+}
+
+#nav > li > a {
+    padding: 0 24px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#nav > li:hover > a {
+    display: block;
+    background-color: rgb(221, 221, 221);
+    color: black;
+}
+
+/*Show Subnav*/
+#nav li:hover .subnav {
+    display: block;
+}
+
+.subnav {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.subnav li {
+    width: 160px;
+    height: 38px;
+}
+.subnav li a {
+    line-height: 38px;
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding-left: 16px;
+}
+.subnav li:hover a {
+    display: block;
+    background-color: rgb(218, 218, 218);
+}
+
+/* icons */
+.ti-angle-down {
+    font-size: 15px;
+}
+#header .ti-search, #header .ti-menu {
+    color: white;
+    line-height: 46px;
+    font-weight: 700;
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.ti-search:hover, .menu-mobile:hover {
+    background-color: orangered;
+    display: block;
+    cursor: pointer;
+}
+.menu-mobile {
+    display: none;
+}
+
+/*SLIDE*/
+#slide {
+    background: url("/webdautien/image/chicago.jpg") top center / cover no-repeat;
+    padding-top: 50%;
+    margin-top: 46px;
+    position: relative;
+}
+#slide .slide-text {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+.slide-heading {
+    font-size: 24px;
+    padding-bottom: 22px;
+}
+.slide-sub {
+    font-size: 15px;
+    font-weight: 600;
+    text-shadow: 0 0 4px;
+    padding-bottom: 40px;
+}
+
+/*CONTENT*/
+.content {
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 64px 16px;
+}
+.content-heading {
+    font-weight: 400;
+    padding-bottom: 23px;
+    font-size: 30px;
+}
+.content-text {
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.4;
+}
+.content-sub {
+    padding-bottom: 15px;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.8;
+}
+#content .theband {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.band-team {
+    margin-top: 64px;
+    overflow: hidden;
+}
+.band-team .items {
+    float: left;
+    width: 33.33333%;
+}
+.band-team .name {
+    padding-bottom: 16px;
+}
+.band-team .avt {
+    width: 147px;
+    border-radius: 6px;
+}
+
+/* Tour dates */
+.back {
+    background-color: black;
+}
+.tourdates {
+    max-width: 800px;
+}
+.calendal {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.calendal li {
+    background-color: white;
+    color: rgb(100, 100, 100);
+    text-align: left;
+    list-style-type: none;
+    padding: 8px 20px;
+    border-bottom: 1px #ccc solid;
+}
+.soldout {
+    background-color: orangered;
+    color: white;
+    padding: 2px 6px;
+    margin-left: 10px;
+}
+.quantity {
+    background-color: black;
+    color: white;
+    padding: 0 6px;
+    border-radius: 50%;
+    float: right;
+    line-height: 20px;
+}
+.tickets {
+    overflow: hidden;
+    margin: 0 -8px;
+}
+.ticket {
+    float: left;
+    width: 33.33333%;
+    padding: 0 8px;
+}
+.tickets .img {
+    width: 100%;
+    vertical-align: middle;
+}
+.img:hover {
+    opacity: 0.7;
+}
+.card {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    padding: 16px;
+    text-align: left;
+}
+.card .title {
+    padding-bottom: 16px;
+    font-weight: 600;
+}
+.card .time {
+    opacity: 0.7;
+    padding-bottom: 16px;
+}
+.card .infor {
+    padding-bottom: 16px;
+}
+.card .buy-btn {
+    background-color: black;
+    width: 100px;
+    color: white;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+}
+.card .buy-btn:hover, .send:hover{
+    background-color: #ccc;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.open {
+    display: flex;
+}
+.modal-container {
+    width: 70%;
+    position: relative;
+    animation: trans 0.7s ease;
+}
+@keyframes trans{
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: none;
+    }
+}
+
+.modal .head {
+    background-color: #009688;
+    height: 130px;
+}
+.ti-close {
+    position: absolute;
+    right: 0;
+    padding: 12px;
+    font-size: 20px;
+}
+.ti-close:hover{
+    display: block;
+    cursor: pointer;
+    opacity: 0.9;
+}
+.head .title {
+    line-height: 130px;
+    letter-spacing: 4px;
+    font-weight: 400;
+}
+.modal .body {
+    background-color: white;
+    color: black;
+    height: 343px;
+    text-align: left;
+    padding: 20px;
+    font-size: 16px;
+}
+.modal input {
+    padding: 10px 10px;
+    width: 100%;
+    font-size: 16px;
+    border: solid 1px #ccc;
+}
+
+.modal .btn-pay {
+    background-color: #009688;
+    height: 54px;
+    color: white;
+    text-align: center;
+    line-height: 54px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.btn-pay:hover {
+    background-color: #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+/*contact*/
+.contact {
+    overflow: hidden;
+}
+.content-contact {
+    list-style-type: none;
+    font-size: 18px;
+    text-align: left;
+    padding-top: 10px;
+}
+.content-contact li {
+    padding: 4px 0;
+}
+.contact-form {
+    
+}
+.input {
+    height: 38px;
+    float: left;
+    width: calc(50% - 10px);
+    padding: 0 10px;
+    border: solid 1px #ccc;
+    font-size: 15px;
+}
+.input2 {
+    width: 100%;
+}
+.col-1 {
+    margin-right: 20px;
+}
+.send {
+    float: right;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 10px 16px;
+    font-weight: 400;
+    margin-top: 16px;
+}
+.maps {
+    width: 100%;
+    opacity: 0.9;
+}
+
+/*FOOTER*/
+#footer {
+    text-align: center;
+    font-size: 24px;
+}
+#footer i:hover, a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+#footer .end {
+    font-size: 16px;
+}
+
+/* RESPONSIVE */
+/*tablet*/
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+    #slide,
+    #tour, .back,
+    .maps,
+    #footer {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .maps{
+        display: flex;
+        justify-items: center;
+    }
+    #slider {
+        width: 100%;
+    }
+}
+
+/*mobile*/
+@media only screen and (max-width: 37.4375em){
+    .band-team .items {
+        float: none;
+        width: 100%;
+        font-size: 24px;
+    }
+    .band-team .avt {
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    #tour .tourdates, .back {
+        width: 100%;
+    }
+    .ticket {
+        width: 100%;
+        float: none;
+        padding-bottom: 20px;
+    }
+    .col-second {
+        width: 100%;
+    }
+    .col-1 {
+        margin: 0;
+        margin-top: 20px;
+    }
+    #header {
+        background-color: black;
+        height: auto;
+        box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+    }
+    
+    #nav li {
+        display: block;
+        line-height: 46px;
+        float: none;
+        position: relative;
+    }
+    .subnav {
+        width: 100%;
+        padding-left: 6%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    .subnav li {
+        width: 100%;
+    }
+    .subnav li a {
+        color: white;
+    }
+    .subnav li:hover a {
+        color: rgb(0, 0, 0);
+    }
+    .menu-mobile {
+        display: block;
+    }
+    .menu-mobile:hover {
+        background-color: rgb(173, 173, 173);
+        display: block;
+    }
+    .ti-search {
+        display: none;
+    }
+    .menu-none {
+        display: none;
+    }
+    .menu-show {
+        display: block;
+    }
+}
