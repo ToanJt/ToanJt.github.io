@@ -477,6 +477,9 @@ html {
     .subnav li {
         width: 100%;
     }
+    .subnav li a {
+        color: white;
+    }
     .subnav li:hover a {
         color: rgb(0, 0, 0);
     }
