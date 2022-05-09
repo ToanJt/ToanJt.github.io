@@ -100,8 +100,8 @@ html {
     display: flex;
     flex-direction: column;
     margin-top: 120px;
-    /* margin-left: -200px; */
-    margin-right: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 140px;
     width: 60%;
 }
@@ -138,7 +138,7 @@ html {
     font-size: 20px;
 }
 #content .content-heading1, .content-heading2 {
-    font-size: 120px;
+    font-size: 100px;
     font-family: 'Palanquin Dark', sans-serif;
     margin-left: -8px;
 }
@@ -209,8 +209,6 @@ html {
 #content .bar-right {
     align-self: center;
     position: relative;
-    margin-top: 70px;
-    right: 40px;
 }
 .bar-one, .bar-two {
     transform: rotate(90deg);
@@ -254,7 +252,7 @@ html {
 .footer-content {
     display: flex;
     list-style-type: none;
-    position: absolute;
+    position: relative;
 }
 .footer1 {
     padding: 0 84px;
@@ -325,9 +323,7 @@ html {
         justify-content:center;
         margin-left: 133px;
     }
-    #content .bar-right {
-        right: -200px;
-    }
+    
     #content .itar {
         display: none;
     }
@@ -364,16 +360,13 @@ html {
         left: 26px;
         bottom: 20px;
     }
-    #content .bar-right {
-        right: -160px;
-    }
+    
     #content .btn-explore{
         margin-right: -212px;
         top:50px;
     }
     #content .bar-right {
-        right: -190px;
-        margin-top: -54px;
+        right: -30%;
     }
     #footer {
         bottom: 30px;
@@ -443,29 +436,51 @@ html {
         padding-left: 10px;
     }
     #content .bar-right {
-        right: -152px;
+        /* right: -152px; */
     }
 }
 /* MOBILE-COMMON */
 @media only screen and (max-width: 635px){
     #content .content-heading1, .content-heading2 {
-        font-size: 60px;
+        font-size: 40px;
     }
     #content .content-heading1{
-        padding-bottom: 48px;
+        padding-bottom: 72px;
     }
     #content .date{
-        font-size: 18px;
+        font-size: 14px;
+        margin-left: -5px;
+    }
+    #content .content-text {
+        margin-left: -5px;
     }
     #home{
-        margin-left: 35px;
+        margin-left: 17px;
     }
     #content .content-main{
-        margin-left: 42px;
+        margin-left: 22px;
         width: auto;
+    }
+    #content .btn-explore {
+        margin-right: 0;
     }
     #footer .footer1{
         padding-left: 46px;
+    }
+    #footer .footer-btn{
+        align-self: unset;
+        justify-content: space-between;
+        position: relative;
+        bottom: 265px;
+    }
+    #content .btn-explore::after {
+        right: -44px;
+    }
+    #content .btn-explore::before {
+        right: -40px;
+    }
+    #footer .footer1 {
+        padding-left: 26px;
     }
 }
 
