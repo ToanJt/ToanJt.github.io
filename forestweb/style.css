@@ -252,7 +252,7 @@ html {
 .footer-content {
     display: flex;
     list-style-type: none;
-    position: relative;
+    position: absolute;
 }
 .footer1 {
     padding: 0 84px;
@@ -305,6 +305,9 @@ html {
 
 /* TABLET width >= 740 & width < 1024 */
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+    #home{
+        margin-left: 54px;
+    }
     #nav {
         display: none;
     }
@@ -321,7 +324,7 @@ html {
     }
     #content {
         justify-content:center;
-        margin-left: 133px;
+        margin-left: 25px;
     }
     
     #content .itar {
@@ -368,7 +371,7 @@ html {
     #content .bar-right {
         right: -30%;
     }
-    #footer {
+    #footer { 
         bottom: 30px;
     }
     .footer-btn{
@@ -382,6 +385,9 @@ html {
     }
     #nav .icons-header {
         display: block;
+    }
+    #home {
+        margin-left: 38px;
     }
     #header .ti-menu {
         display: block;
@@ -397,8 +403,11 @@ html {
     .itar {
         display: none;
     }
+    #content {
+
+    }
     #content .content-main {
-        margin-left: 120px;
+        margin-left: 42px;
     }
     #content .content-heading1, .content-heading2{
         font-size: 80px;
@@ -413,11 +422,14 @@ html {
         align-self: flex-start;
         margin-top: 17px;
     }
+    #footer {
+        position: absolute;
+    }
     #footer .footer-content{
         display: block;
     }
     #footer .footer1 {
-        padding-left: 123px;
+        padding-left: 46px;
         margin-top: 20px;
     }
     #footer .footer-btn{
@@ -460,27 +472,28 @@ html {
     #content .content-main{
         margin-left: 22px;
         width: auto;
+        text-align: center;
+        margin-right: 22px;
     }
     #content .btn-explore {
         margin-right: 0;
+        left: -5px;
     }
     #footer .footer1{
-        padding-left: 46px;
+        padding-left: 19px;
     }
     #footer .footer-btn{
-        align-self: unset;
+        display: none;
+        /* align-self: unset;
         justify-content: space-between;
         position: relative;
-        bottom: 265px;
+        bottom: 265px; */
     }
     #content .btn-explore::after {
         right: -44px;
     }
     #content .btn-explore::before {
         right: -40px;
-    }
-    #footer .footer1 {
-        padding-left: 26px;
     }
 }
 
