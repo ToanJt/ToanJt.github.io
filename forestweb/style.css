@@ -10,6 +10,7 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    /* overflow: hidden; */
 }
 
 /* --COMMON-- */
@@ -33,6 +34,12 @@ html {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    justify-content: space-between;
 }
 
 /* --HEADER-- */
@@ -302,29 +309,213 @@ html {
 }
 
 /* ================RESPONSIVE=============== */
-
+@media only screen and (max-width: 1024px){
+    #home{
+        margin-left: 54px;
+    }
+    #nav {
+        /* display: none; */
+        position: absolute;
+        right: 0;
+        top: 80px;
+        background-color: #060d0fe7;
+        border-radius: 16px;
+        overflow: hidden;
+        margin-right: 18px;
+        animation: que 1s ease;
+    }
+    @keyframes que {
+        from {
+            transform: translateX(50px);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+    @keyframes ques {
+        from {
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(200px);
+        }
+    }
+    #nav li {
+        display: block;
+        text-align: center;
+    }
+    #nav a {
+        /* position: absolute; */
+        /* padding: 30px; */
+    }
+    #nav li:hover, .ti-user:hover, .ti-search:hover {
+        background-color: #b2e6db59;
+    }
+    #nav .icons-header {
+        display: block;
+        color: rgb(255, 255, 255);
+        margin-left: 0 !important;
+        text-shadow: 0 0 8px rgb(167, 167, 167);
+    }
+    #header .ti-close {
+        position: relative;
+        display: block;
+        padding: 0 20px;
+        line-height: 80px;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+    }
+    .menu-open {
+        display: none;
+    }
+    .open-mobile-menu {
+        display: none;
+    }
+    #header .ti-menu {
+        position: relative;
+        display: block;
+        padding: 0 20px;
+        line-height: 80px;
+        font-size: 24px;
+    }
+    #header .ti-menu:hover {
+        cursor: pointer;
+    }
+    #header .ti-user {
+        padding: 28px 30px 41px 50px
+    }
+    #header .ti-search {
+        padding: 30px 42px 46px 30px;
+    }
+    #content {
+        justify-content:center;
+        margin-left: 25px;
+        position: relative;
+    }
+    
+    #content .itar {
+        display: none;
+    }
+    #content .content-main {
+        margin-left: -200px;
+    }
+    .footer-content {
+        margin-left: 35px;
+    }
+    #content .content-heading1, .content-heading2 {
+        font-size: 90px;
+    }
+    #content .content-heading1 {
+        padding-bottom: 30px;
+    }
+    #content .content-text{
+        font-size: 16px;
+    }
+    .itar-mobile {
+        display: flex;
+        justify-content: space-between;
+        width: 240px;
+        font-size: 20px;
+        position: relative;
+        display: none;
+    }
+    #header .itar-mobile {
+        line-height: 80px;
+    }
+    .taskbar-mobile {
+        width: 40px;
+        height: 4px;
+        position: absolute;
+        background-color: rgb(248, 37, 72);
+        left: 26px;
+        bottom: 20px;
+    }
+}
 /* TABLET width >= 740 & width < 1024 */
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
     #home{
         margin-left: 54px;
     }
     #nav {
-        display: none;
+        /* display: none; */
+        position: absolute;
+        right: 0;
+        top: 80px;
+        background-color: #a2aaac33;
+        border-radius: 16px;
+        overflow: hidden;
+        margin-right: 18px;
+        animation: que 1s ease;
+    }
+    @keyframes que {
+        from {
+            transform: translateX(50px);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+    @keyframes ques {
+        from {
+            transform: translateX(0);
+        }
+        to{
+            transform: translateX(200px);
+        }
+    }
+    #nav li {
+        display: block;
+        text-align: center;
+    }
+    #nav a {
+        /* position: absolute; */
+        /* padding: 30px; */
+    }
+    #nav li:hover, .ti-user:hover, .ti-search:hover {
+        background-color: #b2e6db59;
     }
     #nav .icons-header {
         display: block;
+        color: rgb(255, 255, 255);
+        margin-left: 0 !important;
+        text-shadow: 0 0 8px rgb(167, 167, 167);
     }
-    #header .ti-menu {
+    #header .ti-close {
+        position: relative;
         display: block;
         padding: 0 20px;
         line-height: 80px;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+    }
+    .menu-open {
+        display: none;
+    }
+    .open-mobile-menu {
+        display: none;
+    }
+    #header .ti-menu {
+        position: relative;
+        display: block;
+        padding: 0 20px;
+        line-height: 80px;
+        font-size: 24px;
     }
     #header .ti-menu:hover {
         cursor: pointer;
     }
+    #header .ti-user {
+        padding: 28px 30px 41px 50px
+    }
+    #header .ti-search {
+        padding: 30px 42px 46px 30px;
+    }
     #content {
         justify-content:center;
         margin-left: 25px;
+        position: relative;
     }
     
     #content .itar {
@@ -363,13 +554,17 @@ html {
         left: 26px;
         bottom: 20px;
     }
-    
+    #content .content-main {
+        position: unset;
+    }
     #content .btn-explore{
-        margin-right: -212px;
-        top:50px;
+        position: absolute;
+        left: 86px;
+        bottom: 0;
     }
     #content .bar-right {
         right: -30%;
+        display: none;
     }
     #footer { 
         bottom: 30px;
@@ -380,9 +575,6 @@ html {
 }
 /* MOBILE width < 740 */
 @media only screen and (max-width: 46.1875em){
-    #nav {
-        display: none;
-    }
     #nav .icons-header {
         display: block;
     }
@@ -450,6 +642,9 @@ html {
     #content .bar-right {
         /* right: -152px; */
     }
+    #footer {
+        
+    }
 }
 /* MOBILE-COMMON */
 @media only screen and (max-width: 635px){
@@ -505,12 +700,12 @@ html {
     .footer-first {
         padding-left: 84px;
     }
-    #header .header-icon {
+    /* #header .header-icon {
         margin-left: -30px;
-    }
-    #header .header-icon {
+    } */
+    /* #header .header-icon {
         padding-left: 20px !important;
-    }
+    } */
 }
 /* 1625 */
 @media only screen and (min-width: 1024px) and (max-width: 1394px){

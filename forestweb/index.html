@@ -25,7 +25,7 @@
                     </p>
                     <p class="b-mobile date fn-wei700">Instagram</p>
                 </div>
-                <ul id="nav">
+                <ul id="nav" class="js-mobile-menu open-mobile-menu">
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">News</a></li>
@@ -35,8 +35,8 @@
                         <i class="header-icon ti-search"></i>
                     </li>
                 </ul>
-                <i class="ti-menu js-menu"></i>
-                
+                <i id="OPEN" class="ti-menu js-menu menu-open"></i>
+                <i id="CLOSE" class="ti-close js-close close"></i>
             </div>
     
             <div id="content">
@@ -87,8 +87,23 @@
         </div>
     </div>
     <script>
+        const openMenu = document.querySelector('.js-mobile-menu')
         const btnMenu = document.querySelector('.js-menu')
-        btnMenu.addEventListener('click', showList)
+        const btnClose = document.querySelector('.js-close')
+        const btnOpenMenu = document.querySelector('.js-menu')
+        btnMenu.addEventListener('click', showMenu)
+        function showMenu() {
+            openMenu.classList.remove('open-mobile-menu')
+            document.getElementById("OPEN").style.display="none"
+            document.getElementById("CLOSE").style.display="block"
+        }
+        btnClose.addEventListener('click', closeMenu)
+        function closeMenu(){
+            openMenu.classList.add('open-mobile-menu')
+            document.getElementById("CLOSE").style.display="none"
+            document.getElementById("OPEN").style.display="block"
+        }
+        
     </script>
 </body>
 </html>
