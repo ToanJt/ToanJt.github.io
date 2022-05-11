@@ -19,6 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 .heading {
     position: absolute;
@@ -28,6 +29,8 @@
 }
 #MyForm {
     position: relative;
+    top: 80px;
+    bottom: 40px;
     width: var(--widForm);
     height: 700px;
     background-color: white;
@@ -74,4 +77,8 @@ textarea {
 }
 #btnSubmit:hover {
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+@media only screen and (max-width: 740px){
+    
 }
