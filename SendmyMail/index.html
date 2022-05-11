@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SendMyMail</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./imgs/heavyicon.png">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="MyForm">
+            <h1 class="heading">Email Me</h1>
+            <div class="main-form">
+                <form method="post" onsubmit="sendEmail(); reset(); return false;">
+                    <input type="text" name="" id="user" placeholder="Your Name">
+                    <input type="email" name="" id="email_from" placeholder="Your Email">
+                    <input type="email" name="" id="toEmail" placeholder="Send to Email">
+                    <input type="text" name="" id="phone" placeholder="Your Phone">
+                    <textarea name="" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                    <button id="btnSubmit" type="submit" value="">SEND</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function sendEmail(){
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "happyhell1276@gmail.com",
+            Password : "00A38BE8A91AFC5C037A212B970310701EA8",
+            Post: 2525,
+            To : document.getElementById("toEmail").value,
+            From : "lexuantoan5703@gmail.com",
+            Subject : "Có người vừa nhờ Toàn gửi Mail cho bạn!!",
+            Body : "Name: " + document.getElementById("user").value
+                + "<br> Email: " + document.getElementById("email_from").value
+                + "<br> Phone: " + document.getElementById("phone").value
+                + "<br> Message: " + document.getElementById("message").value
+            }).then(
+        message => alert(message)
+    );
+    }
+</script>
+</html>
