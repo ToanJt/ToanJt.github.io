@@ -11,18 +11,22 @@
 </head>
 <body>
     <div id="main">
-        <div id="MyForm">
-            <h1 class="heading">Email Me</h1>
-            <div class="main-form">
-                <form method="post" onsubmit="sendEmail(); reset(); return false;">
-                    <input type="text" name="" id="user" placeholder="Your Name">
-                    <input type="email" name="" id="email_from" placeholder="Your Email">
-                    <input type="email" name="" id="toEmail" placeholder="Send to Email">
-                    <input type="text" name="" id="phone" placeholder="Your Phone">
-                    <textarea name="" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                    <button id="btnSubmit" type="submit" value="">SEND</button>
-                </form>
+        <div id="background">
+            <div id="header"></div>
+            <div id="MyForm">
+                <h1 class="heading">Email Me</h1>
+                <div class="main-form">
+                    <form onsubmit="sendEmail(); reset(); return false;">
+                        <input type="text" name="name" id="user" placeholder="Your Name">
+                        <input type="email" name="email" id="email_from" placeholder="Your Email">
+                        <input type="email" name="toemail" id="toEmail" placeholder="Send to Email">
+                        <input type="text" name="phone" id="phone" placeholder="Your Phone">
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                        <button id="btnSubmit" type="submit" value="">SEND</button>
+                    </form>
+                </div>
             </div>
+            <div id="footer"></div>
         </div>
     </div>
 </body>

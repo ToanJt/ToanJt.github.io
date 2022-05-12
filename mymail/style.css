@@ -9,8 +9,15 @@
     --widForm: 500px;
 }
 
+body, html {
+    height: 100%;
+    width: 100%;
+    }
+body {
+    background: linear-gradient(230deg, #a4e6dc, #43acce);;
+}
+
 #main {
-    background: linear-gradient(230deg, #a4e6dc, #43acce);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -18,8 +25,11 @@
     left: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
     overflow: auto;
+}
+#background {
+    /* background: linear-gradient(230deg, #a4e6dc, #43acce); */
+    position: relative;
 }
 .heading {
     position: absolute;
@@ -29,8 +39,8 @@
 }
 #MyForm {
     position: relative;
-    top: 80px;
-    bottom: 40px;
+    /* top: 80px; */
+    /* bottom: 40px; */
     width: var(--widForm);
     height: 700px;
     background-color: white;
@@ -41,6 +51,8 @@
     align-items: center;
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    margin-bottom: 50px;
+    margin-top: 100px;
 }
 #MyForm input, textarea{
     display: block;
@@ -79,6 +91,15 @@ textarea {
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 
-@media only screen and (max-width: 740px){
-    
+@media only screen and (max-width: 600px){
+    #main {
+        position: unset;
+        display: block;
+    }
+    #MyForm{
+        width: 600px;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
