@@ -67,6 +67,9 @@ html {
     text-shadow: 0 0 4px white;
     cursor: pointer;
 }
+#nav .closes {
+    display: none;
+}
 .ti-user {
     padding-right: 30px;
     padding-left: 60px;
@@ -119,9 +122,22 @@ html {
     left: 20vw;
     height: 90%;
     justify-content: center;
+    z-index: 1;
 }
-.date {
-    
+.opppe {
+    display: grid !important;
+}
+.remove {
+    display: none !important;
+}
+.adds {
+    display: block !important;
+}
+.z-index1 {
+    z-index: 1 !important;
+}
+.z-index0 {
+    z-index: 0 !important;
 }
 #content .itar {
     align-self: center;
@@ -342,7 +358,12 @@ html {
 /* -------------------------------- */
 /* DESKTOP LARGE SCREEN >=1025 && <=1200 */
 @media only screen and (min-width: 64.0625em) and (max-width: 75em){
-
+    #nav {
+        display: inline-block !important;
+    }
+    #CLOSE {
+        display: none !important;
+    }
 }
 /* --------------------------------- */
 /* SMALL SCREEN LAPTOP >=769 && <= 1024 */
@@ -435,6 +456,7 @@ html {
         border-bottom-left-radius: 10px;
         display: none;
         width: 180px;
+        z-index: 1;
     }
     #header .ti-menu {
         display: block;
@@ -586,6 +608,7 @@ html {
     #nav a {
         float: right;
         font-size: 17px;
+        padding: 0;
     }
     #nav .ti-close {
         background-color: #ff0055;
@@ -648,6 +671,7 @@ html {
     .content-main{
         left: 15vw;
         max-width: 70vw;
+        z-index: 1;
     }
     #content .itar{
         position: relative;
@@ -711,7 +735,7 @@ html {
         padding-bottom: 0;
     }
 }
-}
+
 /* --------------------------------- */
 
 /* MOBILE-COMMON */
@@ -760,4 +784,3 @@ html {
         right: -40px;
     }
 } */
-

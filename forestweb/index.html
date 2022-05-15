@@ -26,7 +26,7 @@
                     <p class="b-mobile fz-20 fn-wei700">Instagram</p>
                 </div>
                 <div id="MENU" class="ti-menu js-menubtn"></div>
-                <ul id="nav" class="js-menu">
+                <ul id="nav" class="js-nav">
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">News</a></li>
@@ -35,13 +35,13 @@
                         <i class="header-icon ti-user"></i>
                         <i class="header-icon ti-search"></i>
                     </li>
-                    <li id="CLOSE" class="ti-close js-close"></li>
+                    <li id="CLOSE" class="closes ti-close js-close"></li>
                 </ul>
                 
                 <!-- <i id="OPEN" class="ti-menu js-menu menu-open"></i> -->
                 <!-- <i id="CLOSE" class="ti-close js-close close"></i> -->
             </div>
-            <div class="content-main">
+            <div class="content-main js-contain-main">
                 <p class="fz-20 date fn-wei700">2017</p>
                 <div class="content-heading1">Natural</div>
                 <div class="content-heading2">Environment</div>
@@ -90,21 +90,28 @@
         const btnMenu = document.querySelector('.js-menubtn')
         const navOpen = document.querySelector('.js-menu')
         const btnClose = document.querySelector('.js-close')
+        const containMain = document.querySelector('.js-contain-main')
+
         btnMenu.addEventListener('click', showMenu)
-        function showMenu() {
-            document.getElementById("nav").style.display="grid"
-            document.getElementById("MENU").style.display="none"
+        const Nav = document.querySelector('.js-nav')
+        function showMenu(){
+            Nav.classList.add('opppe')
+            btnMenu.classList.add('remove')
+            btnClose.classList.add('adds')
             document.getElementById("nav").style.animation="FadeInMenu 1s ease"
             document.getElementById("CLOSE").style.animation="CloseMenu 2s ease"
             document.getElementById("BarRight").style.animation="FadeOutBar both 1s"
+            containMain.classList.add('z-index0')
         }
-            btnClose.addEventListener('click', closeMenu)
+        btnClose.addEventListener('click', closeMenu)
         function closeMenu(){
-            document.getElementById("MENU").style.display="block"
+            Nav.classList.remove('opppe')
+            btnMenu.classList.remove('remove')
+            btnClose.classList.add('remove')
             document.getElementById("nav").style.animation="FadeOutMenu 1s both"
-            document.getElementById("nav").style.display="none"
             document.getElementById("BarRight").style.display="block"
             document.getElementById("BarRight").style.animation="FadeInBar ease 1s"
+            containMain.classList.remove('z-index0')
         }
         
     </script>
