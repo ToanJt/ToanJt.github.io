@@ -16,16 +16,17 @@
 </head>
 <body>
     <div id="background">
-        <div id="main">
+        <div id="main" class="js-main">
             <div id="header">
                 <a href="" id="home" class="none_a color-white">Houses</a>
                 <div class="itar-mobile">
-                    <p class="a-mobile date fn-wei700">Behance
-                        <p class="taskbar-mobile"></p>
+                    <p class="a-mobile fz-20 fn-wei700">Behance
+                        <!-- <p class="taskbar-mobile"></p> -->
                     </p>
-                    <p class="b-mobile date fn-wei700">Instagram</p>
+                    <p class="b-mobile fz-20 fn-wei700">Instagram</p>
                 </div>
-                <ul id="nav" class="js-mobile-menu open-mobile-menu">
+                <div id="MENU" class="ti-menu js-menubtn"></div>
+                <ul id="nav" class="js-menu">
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">News</a></li>
@@ -34,29 +35,28 @@
                         <i class="header-icon ti-user"></i>
                         <i class="header-icon ti-search"></i>
                     </li>
+                    <li id="CLOSE" class="ti-close js-close"></li>
                 </ul>
-                <i id="OPEN" class="ti-menu js-menu menu-open"></i>
-                <i id="CLOSE" class="ti-close js-close close"></i>
+                
+                <!-- <i id="OPEN" class="ti-menu js-menu menu-open"></i> -->
+                <!-- <i id="CLOSE" class="ti-close js-close close"></i> -->
             </div>
-    
+            <div class="content-main">
+                <p class="fz-20 date fn-wei700">2017</p>
+                <div class="content-heading1">Natural</div>
+                <div class="content-heading2">Environment</div>
+                <div class="content-text">This is an awesome combination of steel and nature. Excellent
+                    place away from civilization and whole crowded where are
+                    designers wanted to keep integrity with nature. The place
+                    created for you and your world. There is no time...</div>
+                <p class="btn-explore">Explore</p>  
+            </div>
             <div id="content">
                 <div class="itar">
-                    <p class="a date fn-wei700">Behance
-                        <p class="taskbar"></p>
-                    </p>
-                    <p class="b date fn-wei700">Instagram</p>
+                    <p class="a fz-18 fn-wei700">Behance</p>
+                    <p class="b fz-18 fn-wei700">Instagram</p>
                 </div>
-                <div class="content-main">
-                    <p class="date fn-wei700">2017</p>
-                    <div class="content-heading1">Natural</div>
-                    <div class="content-heading2">Environment</div>
-                    <div class="content-text">This is an awesome combination of steel and nature. Excellent
-                        place away from civilization and whole crowded where are
-                        designers wanted to keep integrity with nature. The place
-                        created for you and your world. There is no time...</div>
-                    <p class="btn-explore">Explore</p>  
-                </div>
-                <div class="bar-right">
+                <div id="BarRight" class="bar-right">
                     <p class="bar-one fn-wei700">01</p>
                     <p class="bar-scroll"></p>
                     <p class="bar-two fn-wei700">02</p>
@@ -74,7 +74,7 @@
                         <p class="head">Architect</p>
                         <p class="body">Sergey Makhno</p>
                     </li>
-                    <li class="footer1">
+                    <li class="footer1 footer-third">
                         <p class="head">Location</p>
                         <p class="body">Carpathians</p>
                     </li>
@@ -87,21 +87,24 @@
         </div>
     </div>
     <script>
-        const openMenu = document.querySelector('.js-mobile-menu')
-        const btnMenu = document.querySelector('.js-menu')
+        const btnMenu = document.querySelector('.js-menubtn')
+        const navOpen = document.querySelector('.js-menu')
         const btnClose = document.querySelector('.js-close')
-        const btnOpenMenu = document.querySelector('.js-menu')
         btnMenu.addEventListener('click', showMenu)
         function showMenu() {
-            openMenu.classList.remove('open-mobile-menu')
-            document.getElementById("OPEN").style.display="none"
-            document.getElementById("CLOSE").style.display="block"
+            document.getElementById("nav").style.display="grid"
+            document.getElementById("MENU").style.display="none"
+            document.getElementById("nav").style.animation="FadeInMenu 1s ease"
+            document.getElementById("CLOSE").style.animation="CloseMenu 2s ease"
+            document.getElementById("BarRight").style.animation="FadeOutBar both 1s"
         }
-        btnClose.addEventListener('click', closeMenu)
+            btnClose.addEventListener('click', closeMenu)
         function closeMenu(){
-            openMenu.classList.add('open-mobile-menu')
-            document.getElementById("CLOSE").style.display="none"
-            document.getElementById("OPEN").style.display="block"
+            document.getElementById("MENU").style.display="block"
+            document.getElementById("nav").style.animation="FadeOutMenu 1s both"
+            document.getElementById("nav").style.display="none"
+            document.getElementById("BarRight").style.display="block"
+            document.getElementById("BarRight").style.animation="FadeInBar ease 1s"
         }
         
     </script>
