@@ -614,7 +614,7 @@ html {
         border-top-left-radius: 10px;
     }
     #home {
-        margin-left: 28px;
+        margin-left: 10vw;
     }
     #header .ti-menu {
         display: block;
@@ -732,6 +732,7 @@ html {
         font-size: 16px;
         padding: 18px 30px;
         align-self: start;
+        margin-left: 10px;
     }
     .btn-explore::before{
         width: 55px;
@@ -744,7 +745,7 @@ html {
     }
     .footer-content{
         flex-direction: column;
-        margin-left: 8vw;
+        margin-left: 10vw;
     }
     .footer-first{
         padding: 0;
