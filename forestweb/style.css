@@ -598,15 +598,19 @@ html {
 /* --------------------------------- */
 /* MOBILEs >=320 && <=480 */
 @media only screen and (min-width: 20em) and (max-width: 30em){
+    #header {
+        display: block;
+    }
     #nav {
         justify-items: center;
         background-color: #000000;
         height: calc(50px * 5);
         border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
         display: none;
-        width: 160px;
+        width: 100%;
         position: relative;
-        top: 20vh;
+        top: -80px;
         border-top-left-radius: 10px;
     }
     #home {
@@ -617,6 +621,7 @@ html {
         line-height: 80px;
         padding: 0 30px;
         font-size: 24px;
+        float: right;
     }
     #nav li {
         display: block;
@@ -647,18 +652,20 @@ html {
     }
     @keyframes FadeInMenu{
         from {
-            transform:translateX(100px);
+            transform:translateY(-200px);
+            opacity: 0.5;
         }
         to{
-            transform: translateX(0);
+            transform: translateY(0);
+            opacity: 1;
         }
     }
     @keyframes FadeOutMenu{
         from {
-            transform:translateX(0);
+            transform:translateY(0);
         }
         to{
-            transform: translateX(200px);
+            transform: translateY(-200px);
         }
     }
     @keyframes CloseMenu {
@@ -689,6 +696,7 @@ html {
         left: 8vw;
         max-width: 70vw;
         z-index: 1;
+        height: 70%;
     }
     #content .itar{
         position: relative;
@@ -704,8 +712,12 @@ html {
     .fz-20 {
         font-size: 16px;
     }
+    .date {
+        margin: 0 10px;
+    }
     .content-heading1, .content-heading2{
         font-size: 40px;
+        margin: 0 7px;
     }
     .content-heading2{
         margin-top: -34px;
@@ -713,8 +725,8 @@ html {
     .content-text{
         font-size: 15px;
         text-align: justify;
-        max-width: auto;
-        width: 274px;
+        width: 80vw;
+        margin: 0 10px;
     }
     .btn-explore{
         font-size: 16px;
@@ -756,6 +768,7 @@ html {
         padding-bottom: 0;
     }
     #content .bar-right{
+        display: none !important;
         position: absolute;
         right: 0;
     }
