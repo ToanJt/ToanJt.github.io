@@ -7,12 +7,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=PT+Sans&family=Palanquin+Dark:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="./themify-icons/themify-icons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=PT+Sans&family=Palanquin+Dark:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css">
+    <script src="https://kit.fontawesome.com/08b13d1b0c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="background">
@@ -32,8 +33,11 @@
                     <li><a href="#">News</a></li>
                     <li><a href="#">Contact us</a></li>
                     <li class="icons-header">
-                        <i class="header-icon ti-user"></i>
-                        <i class="header-icon ti-search"></i>
+                        <i class="header-icon fa-solid fa-user"></i>
+                    </li>
+                    <li class="search js-search">
+                        <input spellcheck="false" placeholder=" Search..." class="search-bar js-search-bar" type="text" name="" id="">
+                        <i class="js-search-icon header-icon fa-solid fa-magnifying-glass"></i>
                     </li>
                     <li id="CLOSE" class="closes ti-close js-close"></li>
                 </ul>
@@ -51,10 +55,10 @@
                     created for you and your world. There is no time...</div>
                 <p class="btn-explore">Explore</p>  
             </div>
-            <div id="content">
+            <div id="content" class="js-contain-content">
                 <div class="itar">
-                    <p class="a fz-18 fn-wei700">Behance</p>
-                    <p class="b fz-18 fn-wei700">Instagram</p>
+                    <p class="a fz-16 fn-wei700">Behance</p>
+                    <p class="b fz-16 fn-wei700">Instagram</p>
                 </div>
                 <div id="BarRight" class="bar-right">
                     <p class="bar-one fn-wei700">01</p>
@@ -63,7 +67,6 @@
                 </div>
             </div>
             
-    
             <div id="footer">
                 <ul class="footer-content">
                     <li class="footer1 footer-first">
@@ -92,6 +95,7 @@
         const btnClose = document.querySelector('.js-close')
         const containMain = document.querySelector('.js-contain-main')
         const barR = document.querySelector('.js')
+        const main = document.querySelector('.js-main')
 
         btnMenu.addEventListener('click', showMenu)
         const Nav = document.querySelector('.js-nav')
@@ -109,12 +113,35 @@
             Nav.classList.remove('opppe')
             btnMenu.classList.remove('remove')
             btnClose.classList.add('remove')
-            document.getElementById("nav").style.animation="FadeOutMenu 1s both"
+            document.getElementById("nav").style.animation="FadeOutMenu 1s ease"
             document.getElementById("BarRight").style.display="block"
             document.getElementById("BarRight").style.animation="FadeInBar ease 1s"
             containMain.classList.remove('z-index0')
         }
-        
+        const contentContain =document.querySelector('.js-contain-content')
+        contentContain.addEventListener('click', closeMenu)
+        Nav.addEventListener('click', function(e){
+            e.stopPropagation()
+        })
+        //Search
+        const search = document.querySelector('.js-search')
+        const searchBar = document.querySelector('.js-search-bar')
+        const iconSearch=document.querySelector('.js-search-icon')
+        const ff = document.querySelector('.fa-solid')
+        function showSearch(){
+            searchBar.classList.add('width-170')
+            iconSearch.classList.add('fz-16')
+        }
+        search.addEventListener('click', showSearch)
+        function closeSearch(){
+            searchBar.classList.remove('width-170')
+            iconSearch.classList.remove('fz-16')
+            iconSearch.classList.add('color-white')
+        }
+        main.addEventListener('click', closeSearch)
+        searchBar.addEventListener('click', function event(e){
+            e.stopPropagation()
+        })
     </script>
 </body>
 </html>

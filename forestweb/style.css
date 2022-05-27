@@ -13,6 +13,7 @@ html {
     /* overflow: hidden; */
 }
 
+
 /* --COMMON-- */
 .fn-wei700 {
     font-weight: 700;
@@ -29,10 +30,41 @@ html {
 .fz-18 {
     font-size: 18px;
 }
+.fz-16{
+    font-size: 16px !important;
+}
 .fz-20{
     font-size: 20px;
 }
-
+.opppe {
+    display: grid !important;
+}
+.remove {
+    display: none !important;
+}
+.adds {
+    display: block !important;
+}
+.z-index1 {
+    z-index: 1 !important;
+}
+.z-index0 {
+    z-index: 0 !important;
+}
+.width-170{
+    width: 150px !important;
+}
+/* .back-white{
+    background-color: white;
+} */
+.color-white{
+    color: white !important; 
+    transition: 0.5s ease;
+}
+.color-black{
+    color: black !important; 
+    transition: 0.5s ease;
+}
 
 /*--MAIN--*/
 #main {
@@ -67,16 +99,40 @@ html {
     text-shadow: 0 0 4px white;
     cursor: pointer;
 }
+#nav .search {
+    /* background-color: white; */
+    border-radius: 40px;
+    line-height: 0;
+    padding: 12px 20px;
+    display: unset;
+    margin-right: 20px;
+}
+#nav .search-bar{
+    height: 40px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid;
+    background: none;
+    width: 0;
+    transition: linear 1s;
+    transition-delay: 0.5s;
+    font-size: 16px;
+}
+.fa-solid {
+    padding-right: 20px;
+}
+.fa-magnifying-glass {
+    padding-right: 0;
+    color: white;
+    font-size: 22px;
+}
 #nav .closes {
     display: none;
 }
-.ti-user {
-    padding-right: 30px;
-    padding-left: 60px;
+.closes:hover {
+    cursor: pointer;
 }
-.ti-search {
-    padding-right: 60px;
-}
+
 #home {
     line-height: 80px;
     margin-left: 60px;
@@ -91,17 +147,20 @@ html {
 }
 #nav li {
     display: inline-block;
-    line-height: 86px;
+    line-height: 80px;
 }
 #nav a {
     text-decoration: none;
-    color: white;
-    padding: 0 32px;
-    font-size: 22px;
-    text-shadow: 0 0 8px rgb(83, 83, 83);
+    color: whitesmoke;
+    padding: 0 25px;
+    font-size: 20px;
+    text-shadow: 0 0 8px rgb(65, 65, 65);
+    font-weight: 550;
 }
 #nav a:hover {
-    text-shadow: 0 0 4px rgb(255, 255, 255);
+    color: white;
+    font-weight: 580;
+    text-shadow: 0 0 4px rgb(214, 214, 214);
 }
 .ti-menu {
     display: none;
@@ -125,21 +184,7 @@ html {
     justify-content: center;
     z-index: 1;
 }
-.opppe {
-    display: grid !important;
-}
-.remove {
-    display: none !important;
-}
-.adds {
-    display: block !important;
-}
-.z-index1 {
-    z-index: 1 !important;
-}
-.z-index0 {
-    z-index: 0 !important;
-}
+
 #content .itar {
     align-self: center;
     display: flex;
@@ -185,12 +230,12 @@ html {
 }
 
 .content-heading1, .content-heading2 {
-    font-size: 80px;
+    font-size: 70px;
     font-family: 'Palanquin Dark', sans-serif;
     margin-left: -5px;
 }
 .content-heading2 {
-    margin-top: -68px;
+    margin-top: -60px;
 }
 .content-text {
     line-height: 1.6;
@@ -208,6 +253,14 @@ html {
     animation: both 2.5s fadeout;
 }
 
+@keyframes fadeout {
+    from {
+        transform: translateX(100px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
 @keyframes fadeout {
     from {
         transform: translateX(100px);
@@ -242,6 +295,7 @@ html {
     color: black;
     font-weight: 600;
     animation:both 2.5s fadein;
+    transform: translateX(100px);
 }
 @keyframes fadein {
     from {
@@ -312,12 +366,12 @@ html {
 .head {
     position: absolute;
     bottom: 24px;
-    font-size: 16px;
+    font-size: 12px;
 }
 .body {
     padding-top: 20px;
     letter-spacing: 1px;
-    font-size: 18px;
+    font-size: 14px;
 }
 .back, .next {
     background-color: rgb(248, 37, 72);
@@ -353,10 +407,10 @@ html {
 /* EXTRA LARGE SCREENs >=1201px */
 @media only screen and (min-width: 75.0625em){
     .content-heading1, .content-heading2{
-        font-size: 90px;
+        font-size: 70px;
     }
     .content-text{
-        font-size: 18px;
+        font-size: 16px;
         max-width: 600px;
     }
     .next{
@@ -384,10 +438,22 @@ html {
 @media only screen and (min-width: 48.0625em) and (max-width: 64em){
     #nav {
         justify-items: center;
-        background-color: #00000036;
-        height: calc(86px * 5);
-        border-bottom-left-radius: 10px;
+        background-color: #000000;
+        height: 100vh;
         display: none;
+        width: 25%;
+    }
+    .fa-solid{
+        padding-right: 0;
+        color: white;
+    }
+    #nav .search{
+        margin-right: 0;
+        border-radius: 0;
+        border: none;
+    }
+    #nav .search-bar{
+        color: white;
     }
     #header .ti-menu {
         display: block;
@@ -395,20 +461,27 @@ html {
         padding: 0 30px;
         font-size: 24px;
     }
+    #header .header-icon{
+        font-size: 30px;
+    }
     #nav li {
         display: block;
     }
     #nav a {
         float: right;
     }
-    #nav .ti-close {
+    #nav .ti-close{
+        font-size: 30px;
+    }
+    /* #nav .ti-close {
         background-color: #00000047;
         color: white;
         padding: 0 16px;
-        margin-top: 20px;
+        margin-top: 36px;
         border-radius: 50%;
         line-height: 50px;
         position: relative;
+        display: none;
     }
     #nav .ti-close::after {
         position: absolute;
@@ -418,7 +491,7 @@ html {
         background: linear-gradient(white, #00000047);
         top: -20px;
         left: 23px;
-    }
+    } */
     @keyframes FadeInMenu{
         from {
             transform:translateX(100px);
@@ -465,18 +538,38 @@ html {
 @media only screen and (min-width: 30.0625em) and (max-width: 48em){
     #nav {
         justify-items: center;
-        background-color: #00000036;
-        height: calc(70px * 5);
+        background-color: #000000;
+        height: 100vh;
         border-bottom-left-radius: 10px;
         display: none;
-        width: 180px;
+        width: 30%;
         z-index: 1;
+    }
+    #CLOSE {
+        display: none;
+    }
+    .fa-solid{
+        padding-right: 0;
+        color: white;
+    }
+    #nav .search{
+        margin-right: 0;
+        border-radius: 0;
+        border: none;
+    }
+    #nav .search-bar{
+        color: white;
     }
     #header .ti-menu {
         display: block;
         line-height: 70px;
         padding: 0 30px;
         font-size: 24px;
+    }
+    #header .header-icon{
+        padding: 0;
+        line-height: 46px;
+        font-size: 30px;
     }
     #nav li {
         display: block;
@@ -490,12 +583,13 @@ html {
         background-color: #00000047;
         color: white;
         padding: 0 16px;
-        margin-top: 20px;
+        margin-top: 26px;
         border-radius: 50%;
         line-height: 48px;
         position: relative;
+        font-size: 30px;
     }
-    #nav .ti-close::after {
+    /* #nav .ti-close::after {
         position: absolute;
         content: "";
         height: 21px;
@@ -503,7 +597,7 @@ html {
         background: linear-gradient(white, #00000047);
         top: -20px;
         left: 23px;
-    }
+    } */
     @keyframes FadeInMenu{
         from {
             transform:translateX(100px);
@@ -588,9 +682,6 @@ html {
     .body {
         font-size: 13px;
     }
-    #header .header-icon{
-        padding: 0 20px;
-    }
     .footer1{
         padding-right: 3vw;
     }
@@ -604,7 +695,7 @@ html {
     #nav {
         justify-items: center;
         background-color: #000000;
-        height: calc(50px * 5);
+        height: calc(50px * 6);
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         display: none;
@@ -612,6 +703,26 @@ html {
         position: relative;
         top: -80px;
         border-top-left-radius: 10px;
+    }
+    #nav .search{
+        margin-right: 0;
+        padding: 0;
+        margin-bottom: 4px;
+    }
+    .fa-solid{
+        padding-right: 0;
+        color: white;
+    }
+    #nav .search{
+        margin-right: 0;
+        border-radius: 0;
+        border: none;
+    }
+    #nav .search-bar{
+        color: white;
+    }
+    #CLOSE {
+        display: none !important;
     }
     #home {
         margin-left: 10vw;
@@ -635,7 +746,7 @@ html {
     #nav .ti-close {
         background-color: #ff0055;
         color: white;
-        margin-top: 20px;
+        margin-top: 6px;
         border-radius: 50%;
         padding: 0 12px;
         line-height: 40px;
@@ -757,9 +868,6 @@ html {
     .body {
         font-size: 13px;
         padding-top: 14px;
-    }
-    #header .header-icon{
-        padding: 0 20px;
     }
     .footer1{
         padding-right: 3vw;
