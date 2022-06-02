@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:ital,wght@1,700&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:ital,wght@1,700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Manrope:wght@300&family=Montserrat:ital,wght@1,700&family=Plus+Jakarta+Sans:wght@200&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Manrope:wght@300&family=Montserrat:ital,wght@1,700&family=Plus+Jakarta+Sans:wght@200;500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Manrope:wght@300&family=Montserrat:ital,wght@1,700&family=Plus+Jakarta+Sans:wght@200;500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Manrope:wght@300&family=Montserrat:ital,wght@1,700&family=Roboto&display=swap');
+*{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav{
+    position: fixed;
+    background: #fff;
+    top:0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 70px;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid #333;
+    z-index: 1;
+}
+ .nav .navbar{
+    height: 100%;
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;/*Gía trị này giúp cho các khoảng cách giữa các thành phần luôn bằng nhau, 
+    tuy nhiên phần tử đầu luôn nằm sát trái, phần tử cuối luôn nằm sát phải*/
+    padding: 0 50px;
+}
+.nav .navbar .nav-links .links{
+    display: flex;
+}
+.nav .navbar .nav-links .links li a{
+    color: #333;
+}
+.nav .navbar .nav-links .links li{
+    position: relative;/* vị trí của phần tử sẽ tương đối so với vị trí tĩnh bạn đặt 
+    và khoảng không gian xung quanh phần tử sẽ được giữ nguyên.*/
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    white-space: nowrap;/*Văn bản sẽ hiển thị trên cùng một hàng, chỉ xuống hàng khi gặp thẻ <br />.*/
+}
+.nav .navbar .logo a{
+    color: #333;
+    font-size: 50px;
+    font-weight: 1000;
+}
+.nav .navbar .logo a i{
+    font-family: 'Courier New', Courier, monospace;
+}
+.nav .navbar .nav-links .links li .arrow{
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    width:22px ;
+    text-align: center;
+    line-height: 70px;
+    color: #333;
+}
+.nav .navbar .nav-links .links li:hover .arrow{
+    transform: rotate(180deg);
+}
+.nav .navbar .nav-links .links .products-menu{
+    position: absolute;/*giúp định vị trí tuyệt đối cho thành phần theo thành phần bao ngoài, 
+    hoặc ít nhất là theo cửa sổ trình duyệt.*/
+    top: 70px;    
+    background: #fff;
+    line-height: 40px;
+    display: none; 
+    left: 0;  
+    right: 0;
+    width: 170px;
+    border: 2px solid #e67e22;
+    border-top: none ;
+}
+.nav .navbar .nav-links .links li:hover .products-menu{
+    display: block;
+}
+.nav .navbar .appearance{
+    display: flex;  
+    align-items: center;   
+}
+.navbar .appearance .user .user-btn,
+.navbar .appearance .search-box .search-btn,
+.navbar .appearance .cart-shop .cart-btn
+{
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    color: #333;
+    font-size: 23px;
+    text-align: center;
+}
+.slider {
+    text-align: center;
+    padding-top: 69px;
+    cursor: pointer;
+}
+.slider img{
+    width: 100%;
+    border: 1px solid #ccc;
+}
+#wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+.headline{
+    text-align: center;
+    padding-top: 10px;
+    font-family:'Poppin', sans-serif ;
+    color: #e67e22;
+    font-size: 12px;
+}
+ ul.products{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.products li {
+    width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+}
+ul.products li img{
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+}
+.products-info .products-name{
+    font-family: 'Roboto', sans-serif;
+    color: #2c3e50;
+    margin-top:30px;
+}
+ul.products .products-item .products-info div{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 1000;
+    color: #e67e22;
+}
+.products-top a:hover img{
+    transform: scale(1.2);
+}
+a img{
+    transition: all 1s ease;
+}
+.products-top{
+    overflow: hidden;
+}
+ul.products .products-item .products-info .products-price {
+    color: red;
+}
+.banner img{
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 12px;
+    cursor: pointer;
+    padding-top: 10px;
+}
+.baohanh,.try{
+    cursor: pointer;
+}
+.tryproducts{
+    width: 100%;
+}
+.tryproducts h1,
+.tryproducts p{
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+}
+.try{
+    width: 100%;
+}
+.baohanh img{
+    margin-left: 14%;
+}
+.tryproducts button{
+    border-radius: 20px;
+    width: 100px;
+    height: 35px;
+    margin-left: 46.5%;
+    margin-top: 12px;
+    background: #fffa65;
+    border: none;
+}
+.tryproducts button:hover{
+    background: #3498db;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    color: #fff;
+}
+hr{
+    margin-top: 30px;
+}
+.news {
+    padding-top: 100px;
+    text-align: center;
+    font-family:'Poppin', sans-serif ; 
+    padding-bottom: 100px;
+}
+.nav .navbar .nav-links .links li:hover .main{
+    color: #e67e22;
+    transition: all 0.5s ease;
+}
+.news button{
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+    margin-left: -5px;
+    background: black;
+    cursor: pointer;
+}
+.news button i{
+    color:white;
+}
+.news input{
+    margin-top: 20px;
+    width: 350px;
+    height: 50px;
+    font-size: 15px;
+    border-right: none;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    outline: none;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.footer{
+    background: black;
+    padding: 40px 0;
+    color: white;
+    line-height: 30px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-col{
+    width: 20%;
+    padding: 0 15px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+}
+.bigman{
+    font-size: 20px;
+}
+.footer-col ul li a{
+    color: #fff;
+}
+.ykien{
+    width: 120px;
+    height: 40px;
+    border-radius: 20%;
+    background: #3498db;
+    color: white;
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.ykien:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.social-links a{
+    color: #fff;
+    font-weight: bold;
+}
+.fa-phone, .fa-envelope{
+    font-size: 20px;
+}
+.fa-brands{
+    margin: 10px 18px;
+    font-size: 30px;
+}
+.camket{
+    line-height: 20px;
+}
+.footer-col a:hover{
+    color: #e67e22;
+    transition: all 0.5s ease;
+}
+.uytin{
+    margin-top: 30px;
+}
+.home{
+    padding-top:100px;
+    font-family: 'Inter', sans-serif;
+}
+.home ul{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.home ul li a{
+    font-size: 15px;
+   padding-left: 5px;
+   color: #333;
+   font-family:'Roboto', sans-serif;
+}
+.home h4{
+    text-align: center;
+    font-size: 25px;
+    color: #e67e22;
+}
+.body-bag{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.grid-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid-column-2{
+    margin-left: -12px;
+    margin-right: -12px;
+    width: 20%;
+    padding-top: 65px;
+}
+.grid-column-10{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 80%;
+    position: relative;
+}
+.category ul li a{
+    background: #ecf0f1;
+    padding: 8px 20px;
+    border-radius: 5%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #747d8c;
+}
+.category ul li{
+    line-height: 42px;
+}
+.type-products{
+    margin-top: 12px;
+    margin-bottom: 12px;
+    
+}
+.category ul li:hover .hv{
+    color: #e67e22;
+    border: 1px solid #e67e22;
+}
+h4{
+    font-family: 'Roboto', sans-serif;
+}
+/* danh mục sản phẩm */
+.category-p{
+    width: 20%;
+}
+.sapxep{
+    margin-top: 7px;
+}
+.selected{
+    display: inline-flex;
+    float: right;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    padding-top: 30px;
+    margin-left: 690px;
+}
+.selected li{
+    margin-left: 12px;
+    text-align: left;
+    background: white;
+}
+.select-input{
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 5%;
+    font-size: 15px;
+    border: 1px solid #747d8c;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    min-width: 150px;
+}
+.p-menu{
+    border: 1px solid #747d8c;
+    border-top: none;
+    line-height: 30px;
+    display: none;
+}
+.selected li:hover .p-menu{
+    display: block;
+}
+.p-menu a{
+    color: black;
+}
+.home-products ul{
+    display: flex;
+    padding-top: 70px;
+    flex-wrap: wrap;
+    font-family: 'Roboto', sans-serif;
+}
+.home-products img{
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+}
+.home-products ul li{
+    width: 25%;
+    padding:12px 0 0 12px;
+    
+}
+.home-products .pt:hover img{
+    transform: scale(1.2);
+}
+.pt{
+    overflow: hidden;
+}
+s { 
+    text-decoration: line-through;
+  }
+  .price{
+      display: flex;
+  }
+.p4 .pp{
+      color: #e67e22;
+      font-weight: bold;
+  }
+.price .po{
+    margin-left: 20px;
+}
+.home-products .p4 .pn{
+    color: black;
+}
+.bl{
+    color: black;
+}
+.wh{
+    color: white;
+    border: 1px solid #747d8c;
+    border-radius: 50%;
+}
+.br{
+    color: brown;
+}
+.gr{
+    color: green;
+}
+.pu{
+    color: purple;
+}
+.blue{
+    color: #3498db;
+}
+.color-p ul li:hover .den{
+    border: 2px solid black;
+    background: white;
+} 
+.color-p ul li:hover .trang{
+    border: 2px solid white;
+    background: white;
+} 
+.color-p ul li:hover .troi{
+    border: 2px solid #3498db;
+    background: white;
+} 
+.color-p ul li:hover .xanh{
+    border: 2px solid green;
+    background: white;
+} 
+.color-p ul li:hover .nau{
+    border: 2px solid brown;
+    background: white;
+} 
+.color-p ul li:hover .tim{
+    border: 2px solid purple;
+    background: white;
+} 
+.tuluyen{
+    background: #f1f2f6;
+    width: 100%;
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.tuluyen img{
+    width: 600px;
+    margin: 12px;
+}
+.tuluyen h1{
+    font-weight: bold;
+    margin: 12px;
+}
+.last{
+    margin-top: 12px;
+}
+.p-menu li:hover a{
+    color: #e67e22;
+    transition: all 0.2s ease;
+}
+#time{
+    padding: 10px;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 200px;
+    margin: 25px auto;
+    border-radius: 15px;
+    font-family: Verdana;
+    border: 1px solid #333;
+    float: right;
+}
+.giathanh{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    line-height: 40px;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+}
+.gia{
+    margin-left: 12px;
+    cursor: pointer;
+}
+.giathanh input{
+    width: 17px;
+    height: 16px;
+}
+.giathanh:hover p{
+    color: #e67e22;
+}

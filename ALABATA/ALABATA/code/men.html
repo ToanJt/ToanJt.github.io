@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LV - ĐỒ NAM</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="nav">
+        <div class="navbar">
+            <div class="logo"><a href="index.html" class="logo"><i>LV</i></a></div>    
+            <div class="nav-links"> 
+                <ul class="links">
+                    <li>
+                        <a href="#" class="main">Sản Phẩm</a>
+                        <i class='fa-solid fa-chevron-down arrow'></i>
+                    <ul class="products-menu">
+                        <li><a href="#">Đồ Nam</a></li>                   
+                        <li><a href="#">Đồ Nữ</a></li>
+                        <li><a href="#">Đồ Trẻ Em</a></li>
+                        <li><a href="#">Phụ Kiện</a></li>
+                        <li><a href="#">Quần Áo Bóng Đá</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#" class="main">Giới Thiệu</a></li>
+                    <li><a href="#" class="main">NEW</a></li>
+                    <li><a href="#" class="main">Chọn Size</a></li>
+                    <li><a href="#" class="main">Bộ Sưu Tập</a></li>
+                </ul>
+            </div>
+            <div class="appearance">
+                <div class="search-box">
+                    <a href="#" class="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                </div> 
+                <div class="user">
+                    <a href="#" class="user-btn">
+                        <i class="fa-solid fa-user"></i>
+                    </a>                
+                </div>
+                <div class="cart-shop"> 
+                    <a href="#" class="cart-btn"><i class="fa-solid fa-cart-shopping"></i></a>                              
+                </div>
+            </div>        
+        </div> 
+    </div>
+    <script>
+        const giathanh = document.querySelector("input");
+const value = document.querySelector(".value");
+value.textContent = giathanh.value;
+giathanh.oninput = function(){
+    value.textContent = this.value;
+}
+    </script>
+    <div class="home">
+        <ul>
+            <li><a href="index.html">Trang chủ/ </a></li>
+            <li><a href="#"> NAM</a></li>
+        </ul>
+        <h4>LV NAM</h4>
+    </div>
+    <div class="body-bag">
+        <div class="grid-row">
+            <div class="grid-column-2">
+                <div class="category">
+                    <div class="type-p">
+                        <h4>Loại sản phẩm</h4>
+                    <ul class="type-products">
+                        <li class="type-products-links">
+                            <a class="hv" href="#">Áo ba lỗ nam</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a class="hv" href="#">Áo polo nam</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a class="hv" href="#">Áo thun nam/Áo phông nam</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a class="hv" href="#">Đồ bộ nam</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a class="hv" href="#">Quần short nam</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="color-p">
+                        <h4>Màu sắc</h4>
+                    <ul class="type-products">
+                        <li class="type-products-links">
+                            <a href="#" class="den"><i class="fa-solid fa-circle bl"></i> Đen</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a href="#" class="trang"><i class="fa-solid fa-circle wh"></i> Trắng</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a href="#" class="xanh"><i class="fa-solid fa-circle gr"></i> Xanh lá</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a href="#" class="nau"><i class="fa-solid fa-circle br"></i> Nâu</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a href="#" class="tim"><i class="fa-solid fa-circle pu"></i> Tím</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a href="#" class="troi"><i class="fa-solid fa-circle blue"></i> Xanh da trời</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="size-p">
+                        <h4>Kích thước</h4>
+                    <ul class="type-products">
+                        <li class="type-products-links">
+                            <a class="hv" href="#">XS</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a class="hv" href="#">S</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a class="hv" href="#">ML</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a class="hv" href="#">XL</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a class="hv" href="#">2XL</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="material-p">
+                        <h4>Chất liệu</h4>
+                    <ul class="type-products">
+                        <li class="type-products-links">
+                            <a class="hv" href="#">Pique</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a class="hv" href="#">Airycool</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a class="hv" href="#">Cafe</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a class="hv" href="#">Coolmax</a>
+                        </li>
+                        <li class="type-products-links">
+                            <a class="hv" href="#">Cotton</a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="price-p">
+                        <h4>Khoảng giá (VNĐ)</h4>
+                        <div class="giathanh">
+                            <input type="checkbox">
+                            <p class="gia">Nhỏ hơn 100.000đ</p>
+                        </div>
+                        <div class="giathanh">
+                            <input type="checkbox">
+                            <p class="gia">Từ 100.000đ - 200.000đ</p>
+                        </div>
+                        <div class="giathanh">
+                            <input type="checkbox">
+                            <p class="gia">Từ 200.000đ - 350.000đ</p>
+                        </div>
+                        <div class="giathanh">
+                            <input type="checkbox">
+                            <p class="gia">Từ 350.000đ - 500.000đ</p>
+                        </div>
+                        <div class="giathanh">
+                            <input type="checkbox">
+                            <p class="gia">Từ 500.000đ - 700.000đ</p>
+                        </div>
+                        <div class="giathanh">
+                            <input type="checkbox">
+                            <p class="gia">Lớn hơn 700.000đ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-column-10">
+                <div class="selected">
+                    <span class="sapxep">Sắp xếp theo</span>
+                    
+                    <li>
+                        <div class="select-input">
+                            <span class="chonlua">Mặc định</span>  
+                        <i class='fa-solid fa-chevron-down arrow'></i>   
+                        </div>
+                        <ul class="p-menu">
+                            <li><a href="#">Từ A-Z</a></li>                   
+                            <li><a href="#">Từ Z-A</a></li>
+                            <li><a href="#">Rẻ nhất</a></li>
+                            <li><a href="#">Giá giảm nhất</a></li>
+                            <li><a href="#">Mới nhất</a></li>
+                        </ul>
+                    </li>   
+                </div>
+                <div class="home-products">
+                    
+                   <ul class="hp">
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h1.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Quần Short Nam Thể Thao Lưng Thun Basic</a>
+                                <div class="pp">179.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h2.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Polo Thể Thao Nam Airy Cool In Phản Quang - Đen</a>
+                                <div class="pp">349.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h3.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Quần Short Thun Nam Thể Thao Năng Động</a>
+                                <div class="price">
+                                    <div class="pp">299.000đ</div>
+                                <div class="po"><s>2.299.000đ</s></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h4.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Quần Short Gió Nam Thể Thao Basic</a>
+                                <div class="pp">299.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h5.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Polo Thể Thao Nam Melange Phối Ngực</a>
+                                <div class="pp">369.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h6.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Thun Nam Thể Thao In Hình Work Out</a>
+                                <div class="price">
+                                    <div class="pp">239.000đ</div>
+                                <div class="po"><s>1.299.000đ</s></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h7.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Thun Nam Thể Thao Logo In Phản Quang</a>
+                                <div class="pp">239.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h8.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Polo Thể Thao Nam Active Melange In Phản Quang</a>
+                                <div class="pp">349.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h9.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Tanktop Nam Thể Thao Năng Động - Xanh Cổ Vịt</a>
+                                <div class="pp">229.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h10.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Tanktop Nam Thể Thao Năng Động - Tím Than</a>
+                                <div class="pp">229.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h11.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Tanktop Nam Thể Thao Năng Động - Xám</a>
+                                <div class="pp">229.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h12.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Tanktop Nam Thể Thao Năng Động - Xanh Dương</a>
+                                <div class="pp">229.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h13.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Polo Thể Thao Nam Airy Cool Phối Bo - Xanh Lá</a>
+                                <div class="price">
+                                    <div class="pp">349.000đ</div>
+                                <div class="po"><s>5.299.000đ</s></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h14.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Polo Thể Thao Nam Airy Cool Phối Bo - Tím Than</a>
+                                <div class="pp">349.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h15.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Polo Thể Thao Nam Airy Cool Phối Bo - Đen</a>
+                                <div class="pp">349.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h16.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Polo Thể Thao Nam Airy Cool Phối Bo - Trắng</a>
+                                <div class="pp">349.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h17.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Polo Thể Thao Nam Airy Cool - Xanh Ngọc</a>
+                                <div class="price">
+                                    <div class="pp">349.000đ</div>
+                                <div class="po"><s>3.299.000đ</s></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h18.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Polo Thể Thao Nam Airy Cool In Phản Quang - Tím Than</a>
+                                <div class="pp">349.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h19.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Polo Thể Thao Nam Airy Cool In Phản Quang - Đỏ</a>
+                                <div class="pp">349.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h20.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Thun Nam Thể Thao In Ngực Năng Động</a>
+                                <div class="pp">299.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h21.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo T-Shirt Nam Thể Thao Cổ Tròn Dáng Suông</a>
+                                <div class="pp">299.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h22.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Polo Thể Thao Nam Airycool Phối Nẹp</a>
+                                <div class="pp">299.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h23.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo Polo Thể Thao Nam Airy Cool Basic</a>
+                                <div class="pp">379.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h24.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo T-Shirt Nam Thể Thao Melange Năng Động</a>
+                                <div class="pp">249.000đ</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pi">
+                            <div class="pt">
+                                <a href="#" class="pp">
+                                    <img src="image/h25.jpg">                                
+                                </a>
+                            </div>
+                            <div class="p4">
+                                <a href="#" class="pn">Áo T-Shirt Nam In Chữ Running Thể Thao</a>
+                                <div class="price">
+                                    <div class="pp">299.000đ</div>
+                                <div class="po"><s>1.299.000đ</s></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                   </ul>
+                </div>
+                <div class="tuluyen">
+                    <p>Sản phẩm LV Sport Nam là sản phẩm được ưa chuộng, được sự hài lòng, tin tưởng của các anh chàng năng động. </p>
+                    <img class="tlt" src="image/tl1.jpg">
+                    <p><i>LV Sport Nam là sản phẩm được các quý ông lựa chọn</i></p>
+                    <h1>1. Ưu điểm dòng sản phẩm LV Sport Nam</h1>
+                    <p vole>Thấm hút mồ hôi, thoáng mát phù hợp với mọi hoạt động ngoài trời trong mùa hè. 
+                    <br>    Sản xuất bằng chất liệu vải thể thao co giãn, không quá dày rất bền, thể hiện được rõ tính năng động khi sử dụng.
+                    <br>    Khả năng chống mài mòn, đảm bảo độ bền về lâu dài trong khi sử dụng.
+                     <br>   Giữ form tốt, hạn chế được tối đa việc nhăn nhàu dù là giặt tay hay giặt máy.</p>
+                        <img src="image/tl2.jpg" class="tlt">
+                        <p><i>Sở hữu nhiều ưu điểm</i></p>
+                        <h1>2. Những mẫu LV Sport Nam nổi bật</h1>
+                        <p>Nói đến LV, phải nói đến những chiếc áo thể thao - nhánh “văn hóa” được các quý ông săn đón.</p>
+                            <img src="image/tl3.jpg" class="tlt">
+                            <p><i>Thiết kế năng động, trẻ trung</i></p>
+                            <img src="image/tl4.jpg" class="tlt">
+                            <p><i>Phù hợp với những hoạt động thể thao, dễ dàng cử động</i></p>
+                            <img src="image/tl5.jpg" class="tlt">
+                            <p><i>Áo LV Sport kết hợp được với quần short, jean, kaki,..</i></p>
+                            <img src="image/tl6.jpg" class="tlt">
+                            <p><i>Hoạt động với cường độ cao với chất liệu vải bền bỉ, co giãn 4 chiều</i></p>
+                            <img src="image/tl7.jpg" class="tlt">
+                            <p><i>Áo thể thao ôm dáng thích hợp với tất cả dáng người</i></p>
+                            <p class="last">Với những mẫu YODY Sport Nam siêu phong phú và đa dạng, các chàng có thể lựa chọn cho gia đình, bạn bè những chiếc áo đẹp nhất! Nhanh tay sở hữu ngay những sản phẩm chất lượng nhé!</p>
+                            <div id="time"></div>
+	                        <script src="main.js"></script>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Hỗ Trợ Khách Hàng</h4>
+                    <ul>
+                        <li><a href="#">Phương thức thanh toán</a></li>
+                        <li><a href="#">Chính sách giao hàng</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Chính Sách Mua Hàng</h4>
+                    <ul>
+                        <li><a href="#">Chính sách đổi hàng</a></li>
+                        <li><a href="#">Chính sách trả hàng</a></li>
+                        <li><a href="#">Chính sách thanh toán</a></li>
+                        <a href="#"><img class="uytin" src="image/uytin.png"></a>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Địa chỉ cửa hàng - Liên hệ</h4>
+                    <ul>
+                        <li><a href="#">Thông tin liên hệ</a></li>
+                        <li><a href="#">Hệ thống cửa hàng</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Địa chỉ liên hệ</h4>
+                    <ul>
+                        <li>HUB Hà Nội: Số 103, Đường Vạn Phúc, Phường Vạn Phúc, Quận Hà Đông, TP. Hà Nội
+
+                            </li>
+                        <li>HUB Tp HCM: Lầu 1, Số 163 Trần Trọng Cung, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="bigman">LV lắng nghe bạn!</h4>
+                    <p class="camket">Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý kiến đóng góp từ khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa.</p>
+                    <button class="ykien">Gửi Ý Kiến</button>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-solid fa-phone"></i> Hotline: 1900.272737</a><br>
+                        <a href="#"><i class="fa-solid fa-envelope"></i> Email: LV@clothes.me</a><br>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
