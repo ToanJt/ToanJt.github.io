@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author LXTheDev
- *
- */
-module javaCode {
-}
